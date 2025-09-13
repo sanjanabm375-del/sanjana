@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Wellness Platform</title>
+    <link href="https:                                                                                    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Student Wellness and Mental Health Monitoring Platform</h1>
+        
+        <!-- Daily mood and wellness check-in interface -->
+        <section id="checkin" class="my-4">
+            <h2>Daily Mood and Wellness Check-in</h2><br><br>
+            <label for="mood">How are you feeling today?</label><br><br>
+            <select id="mood" class="form-select">
+                <option value="Happy">Happy</option>
+                <option value="Sad">Sad</option>
+                <option value="Anxious">Anxious</option>
+                <option value="Stressed">Stressed</option>
+            </select>
+            <label for="wellnessLevel" class="mt-2">Wellness Level (1-10):</label>
+            <input type="range" id="wellnessLevel" min="1" max="10" class="form-range">
+            <button onclick="submitCheckin()" class="btn btn-primary mt-2">Submit</button>
+             <img width="500px" height="500px" src="https://cdn.who.int/media/images/default-source/mca/adolescent-health/adolescents-health-framework-and-sub-domains-color.jpg?sfvrsn=18e41cac_3">
+            <p id="result"></p>
+        </section>
+        <div>
+            <script>
+                function submitcheckin() {
+                    const mood = document.getelementarybyid('mood'),value;
+                    const wellnesslevel = getelementarybyid('mood').value;
+                    let- message = '';
+
+                    if (mood === 'happy'&& wellnesslevel>=7){
+                        message = "you're doing great!keep up the goodwok.";
+                    }else if(mood === "";)
+                    } else if (mood === 'sad' || wellnesslevel>=7)
+            </script>
+            <script src="https:"//cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js6"></script>
+
+        </div>
+        
+        <!-- Data visualization dashboard for wellness trends -->
+        <section id="dashboard" class="my-4">
+            <h2>Wellness Trends</h2>
+            <canvas id="wellnessChart"></canvas>
+        </section>
+        
+        <!-- Conceptually show personalized wellness recommendations -->
+        <section id="recommendations" class="my-4">
+            <h2>Personalized Wellness Recommendations</h2>
+            <p id="recommendationText">Submit your check-in to see recommendations.</p>
+        </section>
+    </div>
+
+    <script>
+        // Example data for wellness trends chart
+        const wellnessData = {
+            labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'],
+            datasets: [{
+                label: 'Wellness Level',
+                data: [6, 7, 5, 8, 6],
+                borderColor: 'rgb(75, 192, 192)',
+                tension: 0.1
+            }]
+        };
+
+        // Render wellness trends chart
+        const ctx = document.getElementById('wellnessChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: wellnessData,
+        });
+
+        // Handle check-in submission
+        function submitCheckin() {
+            const mood = document.getElementById('mood').value;
+            const wellnessLevel = document.getElementById('wellnessLevel').value;
+            document.getElementById('recommendationText').innerText = Based on your mood (${mood}) and wellness level (${wellnessLevel}), consider practicing mindfulness or talking to a friend.;
+            // Conceptually add sentiment analysis here
+            console.log(Mood: ${mood}, Wellness Level: ${wellnessLevel});
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
